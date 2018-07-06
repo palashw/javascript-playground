@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>output to browser</title>
+        <title>getElementById</title>
     </head>
 
     <style>
@@ -15,27 +15,29 @@
 
          window.onload = function()
         {
-            
-
-            document.getElementById('mybutton').addEventListener(
-                'click',respond
-            )
+            document.getElementById('content').addEventListener(
+                'click',respond);
+            document.getElementById('one').addEventListener(
+                'click',respondone);
         }
 
         function respond(e){
-            document.getElementById('one').
-            innerHTML += "<h1>Welcome</h1>";
-            document.getElementById('two').
-            innerHTML += "JS SP course";
+            console.log("you clicked content");
          }
+
+        function respondone(e){
+        console.log("you clicked one");
+        }
+
 
     </script>
 
     <body>
-        <div id="one">one: </div>
-        <div id="two">two: </div>
-        <button id="mybutton">Press me</button>
-    </body>
+        <div id="content">
+            <p id="one">sentence 1</p>
+            <p id="two">sentence 2</p>
+        </div>
+        </body>
 
 
 </html>
