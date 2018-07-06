@@ -13,31 +13,35 @@
         //document.write("Hello");
         // var clicks = 0;
 
-         window.onload = function()
-        {
-            document.getElementById('content').addEventListener(
-                'click',respond);
-            document.getElementById('one').addEventListener(
-                'click',respondone);
+        window.onload=function(){
+   
+        rnum=Math.floor((Math.random() * 10) + 1);
+        console.log(rnum);
+        document.getElementById('btnchk').addEventListener("click",checkguess);
         }
 
-        function respond(e){
-            console.log("you clicked content");
-         }
-
-        function respondone(e){
-        console.log("you clicked one");
+        function checkguess(e)
+        {
+        var userguess = document.getElementById("guess").value;
+        if(userguess == rnum)
+        {
+        document.getElementById('result').innerHTML="<h1>Correct</h1>";
+        }
+        else
+        {
+        document.getElementById('result').innerHTML="<h1>wrrongs</h1>";
+        }
         }
 
 
     </script>
 
     <body>
-        <div id="content">
-            <p id="one">sentence 1</p>
-            <p id="two">sentence 2</p>
-        </div>
-        </body>
+        <label for="guess" >Guess anumber between 1 and 10</label>
+        <input type="number" min="1" max="10" id="guess">
+        <button id="btnchk">Am i right?</button>
+        <div id="result"></div>
+    </body>
 
 
 </html>

@@ -1,10 +1,10 @@
-window.onload = function()
-    {
-        document.getElementById('mybutton').addEventListener
-        ('click', respond);
-    }
+    window.onload = function()
+        {
+            document.getElementById('mybutton').addEventListener
+            ('click', respond);
+        }
 
-    function respond(e)
-    {
-        alert("Thanks for clicking!");
-    }
+        function respond(e)
+        {
+            alert("Thanks for clicking!");
+        }
