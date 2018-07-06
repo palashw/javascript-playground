@@ -9,25 +9,25 @@
     </style>
 
     <script >
+        var clicks = 0;
+
         window.onload = function()
         {
-        document.getElementById('mybutton').addEventListener('click', respond);
+            console.log("window.onload run...");
+            document.getElementById('mybutton').addEventListener(
+                'click',respond);
         }
 
-        window.onclick = function()
-        {
-            alert("thanks for clicking window");
-        }
+        function respond(e){
 
-        function respond(e)
-        {
-            alert("Hi!")
+            clicks++;
+            console.log("button pressed" + clicks + "times");
+
         }
 
     </script>
 
     <body>
-        <h1>The quick brown fox jumped over the lazy dog</h1>
         <button id="mybutton">Press Me</button>
     </body>
 
