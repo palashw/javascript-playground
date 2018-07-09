@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>Func Returns </title>
+    </head>
+
+    <style>
+    </style>
+
+    <script >
+        function calculateDogYears(ageinhumanyrs){
+            var dogyears = ageinhumanyrs*7;
+            document.getElementById('result').innerHTML = dogyears;
+        }
+
+        function add(a,b){
+            var c = a + b;
+            return c;
+        }
+
+        window.onload = function(){
+            calculateDogYears(6);
+        }
+    </script>
+
+    <body>
+        <div id="result"></div>
+    </body>
+
+</html>
